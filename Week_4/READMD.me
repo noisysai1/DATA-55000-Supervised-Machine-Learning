@@ -1,0 +1,98 @@
+# Week 04 — Linear Models, Logistic Regression and Regularization
+
+## 📚 Topics Covered
+- Linear regression and perceptron basics
+- Logistic regression and posterior probabilities
+- Polynomial regression and feature engineering
+- Kernelized PCA and manifold learning
+- Logistic regression with regularization on notMNIST dataset
+
+---
+
+### ✅ Learning Objectives
+- Compute outputs for **linear regression, perceptron, and logistic regression** using given weights.
+- Extend logistic regression with higher-order interaction terms.
+- Understand the effect of **L2 regularization** on error rates.
+- Apply **polynomial regression** and visualize residuals.
+- Explore **Kernel PCA** and manifold learning techniques.
+- Implement **logistic regression with Keras** on the notMNIST dataset.
+
+---
+
+### 📝 Key Concepts & Explanations
+
+1. **Linear Regression Example**:contentReference[oaicite:0]{index=0}  
+   Using weights (w0 = 0.5, w1 = 0.75, w2 = 0.45) and inputs (x1 = 2, x2 = 0.6):  
+   
+Y = 0.5 + 0.75(2) + 0.45(0.6) = 2.27
+→ Linear regression output = **2.27**
+
+2. **Perceptron Output**:contentReference[oaicite:1]{index=1}  
+Z = 2.27
+Since Z > 0, the perceptron predicts the **positive class**.
+
+3. **Logistic Regression Posterior Probability**:contentReference[oaicite:2]{index=2}  
+P = 1 / (1 + e^-Z) = 0.906
+
+Logistic regression maps the score into a probability of belonging to the positive class.
+
+4. **Logistic Regression with Interaction Term**:contentReference[oaicite:3]{index=3}  
+Adding \( x1 * x2 \) with weight w3 = 0.25:  
+y = 2.3543
+P = 1 / (1 + e^-y) ≈ 0.913
+
+
+5. **Effect of L2 Regularization (notMNIST)**:contentReference[oaicite:4]{index=4}:contentReference[oaicite:5]{index=5}  
+- λ = 1 → error = 1.91  
+- λ = 0.1 → error = 0.99  
+- λ = 0.01 → error = 0.57  
+- λ = 0 → error = 0.41 (lowest error)  
+
+→ The lowest error was observed at **λ = 0**, but this may indicate **overfitting**.
+
+6. **Polynomial Regression (Advertising Dataset)**:contentReference[oaicite:6]{index=6}  
+- Regression with TV and Radio budgets predicted Sales.  
+- 2D polynomial regression achieved **variance score: 0.9258**, showing a strong fit.
+
+7. **Kernel PCA and Manifold Learning**:contentReference[oaicite:7]{index=7}  
+- Applied **RBF Kernel PCA**, Locally Linear Embedding, Isomap, Spectral Embedding, and t-SNE.  
+- These methods revealed non-linear structure in the data.
+
+8. **Logistic Regression with Keras (notMNIST)**:contentReference[oaicite:8]{index=8}  
+- Model: Dense layer with 10 outputs, sigmoid activation, L2 regularization.  
+- Trained for 100 epochs.  
+- **Final validation loss = 0.5614**, training loss = 0.5445.  
+- Visualization of training vs testing loss helped identify convergence behavior.
+
+---
+
+### 📊 Week 4 Results
+- Practiced computing outputs for linear and logistic regression.  
+- Saw how **interaction terms** can capture non-linear relationships.  
+- Understood the **trade-off between regularization and error rate**.  
+- Implemented polynomial regression and visualized model performance.  
+- Explored **dimensionality reduction** techniques using Kernel PCA and manifold learning.  
+- Built a logistic regression classifier in Keras and evaluated its performance.
+
+---
+
+### 📂 Deliverables
+- 📄 [Week 4 Short Answers PDF](./short_answers.pdf)
+- 📄 [Week 4 Assignment Notebook PDF](./assignment_notebook.pdf)
+
+---
+
+### 🔖 Reflections
+- Linear vs logistic regression comparison deepened my understanding of predictive models.  
+- Regularization helped me appreciate the balance between **bias and variance**.  
+- Kernel PCA and manifold learning showed me how to handle **non-linear data structures** effectively.  
+- Implementing logistic regression with Keras was my first step into **deep learning frameworks**.  
+
+---
+
+### ✅ Checklist
+- [x] Upload Week 4 assignments
+- [x] Summarize short answers
+
+
+---
